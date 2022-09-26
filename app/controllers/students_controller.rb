@@ -13,8 +13,8 @@ class StudentsController < ApplicationController
 
     # In the highest_grade action, return JSON data representing the one student with the highest grade
     def highest_grade
-        student = Student.all.order(grade: :desc).first
-        render json: student
+        students = Student.all.order(grade: :desc).first
+        render json: students
     end
 end
 
